@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Início</title>
+        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='icons/icon.png')}}" />
+        <link rel="stylesheet" href="{{url_for('static', filename='/style/style.css')}}" />
+        <link rel="stylesheet" href="../static/style/style.css" />
+        <link rel="stylesheet" href="../static/style/style_init_page.css" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7548162096105528"
+     crossorigin="anonymous"></script>
+     <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <a href="{{url_for('index')}}" id="logo">
+                <img src="{{url_for('static', filename='icons/icon.png')}}" class="logo" />
+            </a>
+            <button id="openMenu">&#9776</button>
+            <nav id="menu">
+                <button id="closeMenu">X</button>
+                <a href="{{url_for('index')}}">Início</a>
+                <a href="{{url_for('download')}}">Produtos</a>
+                <a href="{{url_for('about_fracigma')}}">Sobre</a>
+                <a href="{{url_for('contact')}}">Contato</a>
+            </nav>
+        </header>
+        <aside>
+            <div id="container">
+                <div id="subcontainer">
+                    <div id="div_t">
+                        <h1>Mais assuntos</h1>
+                    </div>
+                    {% for topico in topicos %}
+                    <div>
+                        <a href="/Assuntos/{{topico.topico}}n-b{{topico.id}}"><button type="button" >{{ topico.topico }}</button></a>
+                    </div>
+                    {%  endfor %}
+                </div>
+            </div>
+        </aside>
+        <main>
+            <h1>{{title}}</h1>
+            <section>
+                <div id="container">
+                    <h1>
+                        {{ conteudo.titulo1 }}
+                    </h1>
+                    <br />
+                    <p>
+                        {{ conteudo.conteudo1 | safe }}
+                    </p>
+                    <br /><br /><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7548162096105528"
+     crossorigin="anonymous"></script>
+<!-- Vertical -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7548162096105528"
+     data-ad-slot="6683684612"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7548162096105528"
+     data-ad-slot="6683684612"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad>
+                    <h1>
+                        {{ conteudo.titulo2 }}
+                    </h1>
+                    <br />
+                    <p>
+                        {{ conteudo.conteudo2 | safe }}
+                    </p>
+                    <br /><br />
+                    <h1>
+                        {{ conteudo.titulo3 }}
+                    </h1>
+                    <br />
+                    <p>
+                        {{ conteudo.conteudo3 | safe}}
+                    </p>
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7548162096105528"
+     crossorigin="anonymous"></script>
+<!-- Vertical -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7548162096105528"
+     data-ad-slot="6683684612"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script><amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7548162096105528"
+     data-ad-slot="6683684612"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad>
+                    <br />
+                    <br />
+                    <br />
+                    <p class="prg">Publicado em: [{{ conteudo._date_ }}]</p>
+                </div>
+                
+            </section>
+      
+        </main>
+        <footer>
+            <div id="div">©2023 FraCIGMA</div>
+            <div>
+                <a href="#"><img src="../static/icons/icon1.png" /></a>
+                <a href="#"><img src="../static/icons/icon4.png" /></a>
+            </div>
+            <div>
+                <a href="#"><img src="../static/icons/icon8.png" /></a>
+                <a href="#"><img src="../static/icons/icon5.png" /></a>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="{{url_for('static', filename='/script/script.js')}}">
+        </script>
+    </body>
+</html>

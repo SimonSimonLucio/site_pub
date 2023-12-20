@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sobre</title>
+        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='icons/icon.png')}}" />
+        <link rel="stylesheet" href="{{url_for('static', filename='style/style.css')}}" />
+        <link rel="stylesheet" href="{{url_for('static', filename='style/style_about_1.css')}}" />
+        <link rel="stylesheet" href="../static/style/style_about_1.css" />
+        <script type="text/javascript" src="../static/script/script_about.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <a href="{{url_for('index')}}" id="logo">
+                <img src="{{url_for('static', filename='icons/icon.png')}}" class="logo" />
+            </a>
+            <button id="openMenu">&#9776</button>
+            <nav id="menu">
+                <button id="closeMenu">X</button>
+                <a href="{{url_for('index')}}">Início</a>
+                <a href="{{url_for('download')}}">Produtos</a>
+                <a href="{{url_for('about_fracigma')}}">Sobre</a>
+                <a href="{{url_for('contact')}}">Contato</a>
+            </nav>
+        </header> 
+        <aside>
+            <div id="container">
+                <div id="div_b">
+                    <h1>Mais sobre nós</h1>
+                </div>
+                <div>
+                    <a href="{{url_for('politicas_privacidae')}}"><button type="button" >Políticas e privacidade</button></a>
+                </div>
+                <div id="bo">
+                    <a href="{{url_for('nossos_interesses')}}"><button type="button" >Nossos interesses</button></a>
+                </div>
+            </div>
+        </aside>
+        <main>
+            <h1>Políticas e Privacidade</h1>
+            <section>
+                <div id="container">
+                    <div id="about" >
+                        <p id="info" class="info">
+                            <ol>
+                                <li><h2>Coleta de Informações:</h2>
+                                    <ul>
+                                        <li><p>Ao submeter uma solicitação através do formulário fornecido, podemos coletar informações pessoais básicas, como nome, endereço de e-mail e detalhes da solicitação de desenvolvimento (por exemplo, requisitos do site, bot/automação ou software desejado).</p></li>
+                                    </ul>
+                                </li>
+                                <li><h2>Uso das Informações:</h2>
+                                    <ul>
+                                        <li><p>As informações coletadas são estritamente utilizadas para processar e atender às solicitações dos usuários.</p></li>
+                                        <li><p>Os dados pessoais não serão compartilhados, vendidos ou cedidos a terceiros sem o consentimento expresso do usuário, a menos que exigido por lei.</p></li>
+                                    </ul>
+                                </li>
+                                <li><h2>Comunicação:</h2>
+                                    <ul>
+                                        <li><p>Podemos utilizar o endereço de e-mail fornecido para comunicações relacionadas à solicitação de desenvolvimento. Isso pode incluir confirmações, esclarecimentos sobre requisitos ou atualizações sobre o progresso do projeto.</p></li>
+                                    </ul>
+                                </li>
+                                <li><h2>Segurança:</h2>
+                                    <ul>
+                                        <li><p>Empregamos medidas de segurança física, eletrônica e procedimental para proteger as informações coletadas contra acesso não autorizado, alteração, divulgação ou destruição não autorizada.</p></li>
+                                    </ul>
+                                </li>
+                                <li><h2>Cookies e Tecnologias Semelhantes:</h2>
+                                    <ul>
+                                        <li><p>Nosso site pode utilizar cookies ou tecnologias semelhantes para melhorar a experiência do usuário. Os cookies podem ser usados para lembrar preferências do usuário ou para coletar informações para análises anônimas sobre o uso do site.</p></li>
+                                    </ul>
+                                </li>
+                                <li><h2>Solicitações de Desenvolvimento:</h2>
+                                    <ol>
+                                        <li><p>As solicitações de desenvolvimento são consideradas com base na viabilidade técnica e disponibilidade de recursos da nossa equipe. Não garantimos a aceitação ou conclusão de todas as solicitações.</p></li>
+                                    </ol>
+                                </li>
+                                <li><h2>Direitos do Usuário:</h2>
+                                    <ul>
+                                        <li><p>Os usuários têm o direito de solicitar acesso, correção, exclusão ou restrição de suas informações pessoais mantidas por nós, de acordo com as leis aplicáveis de proteção de dados.</p></li>
+                                    </ul>
+                                </li>
+                                <li><h2>Aceitação dos Termos:
+
+                                </h2>
+                                    <ul>
+                                        <li><p>Ao utilizar nosso formulário para solicitar desenvolvimento, o usuário concorda com os termos e condições descritos nesta Política de Privacidade.</p></li>
+                                    </ul>
+                                </li>
+                                    <p id="bottom">Esta Política de Privacidade está sujeita a atualizações e revisões. Recomendamos que os usuários revisitem periodicamente esta página para estar cientes de quaisquer mudanças. Se houver dúvidas ou preocupações sobre esta política, os usuários podem entrar em contato conosco por meio das informações fornecidas no site.</p>
+                                    </p>
+                            </ol>
+                        <p id="upgrade">Última atualização: <b>[19/12/2023T00:00]</b></p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <div id="div">©2023 FraCIGMA</div>
+            <div>
+                <a href="#"><img src="../static/icons/icon1.png" /></a>
+                <a href="#"><img src="../static/icons/icon4.png" /></a>
+            </div>
+            <div>
+                <a href="#"><img src="../static/icons/icon8.png" /></a>
+                <a href="#"><img src="../static/icons/icon5.png" /></a>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="{{url_for('static', filename='/script/script.js')}}">
+        </script>
+        <script type="text/javascript" src="../static/script/script_about.js"></script>
+    </body>
+</html>

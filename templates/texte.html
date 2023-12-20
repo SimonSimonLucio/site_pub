@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Imagens</title>
+</head>
+<body>
+    <h1>Lista de Imagens</h1>
+    {% for imagem in imagens %}
+        <img src="{{ imagem.caminho }}" alt="{{ imagem.nome }}" width="300" height="300">
+    {% endfor %}
+</body>
+</html>

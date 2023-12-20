@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+main section {
+    height: auto;
+    padding: 70px;
+}
+main section p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+main section #container .prg {
+    margin-left: calc(100% - 250px);
+}
+aside #container {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    padding: 2px;
+    padding-bottom: 10%;
+}
+aside #container #div_t {
+    width: 100%;
+    text-align: center;
+}
+aside #container #subcontainer {
+    height: 100%;
+}
+aside #container div button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    height: 35px;
+    border: 0;
+    outline: 0;
+    color: rgb(17, 0, 255);
+    font-size: 15pt;
+    margin-top: 30px;
+    border-radius: 20px;
+    background-color: rgb(240, 195, 49);
+    box-shadow: 5px 5px 7px rgb(58, 57, 57);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: 0.5s;
+}
+main section #container form div {
+    font-size: 17pt;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 15px;
+}
+main section #container form div p {
+    font-size: 14.5pt;
+    font-family: 'Courier New', Courier, monospace;
+}
+main section #container form {
+    width: 600px;
+}
+aside #container div button:hover {
+    background-color: aliceblue;
+    box-shadow: .0px .0px 15px 1px rgb(58, 57, 57);
+    cursor: pointer;
+}
+aside {
+    flex: 1 1 300px;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-right: 0px solid rgb(240, 195, 49);
+    box-shadow: 10px 5px 10px rgb(240, 195, 49);
+    overflow: auto;
+}
+@media only screen and (max-width: 905px) {
+    header {
+        order: 0;
+    }
+    main {
+        order: 1;
+    }
+    aside {
+        height: 300px;
+        order: 2;
+        border: 0px solid brown;
+    }
+    aside #container {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: center;
+        text-align: center;
+        border: 0px solid brown;
+    }
+    aside #container div {
+        border: 0px solid brown;
+    }
+    footer {
+        order: 3;
+    }
+}
+main section #container {
+    background-origin: padding-box;
+}
+@media only screen and (max-width: 595px) {
+    aside #container {
+        justify-content: center;
+        border: 0px solid brown;
+    }
+}
+@media only screen and (max-width: 450px) {
+    main section {
+        padding: 15px;
+    }
+    main section #container {
+        text-align: justify;
+    }
+}

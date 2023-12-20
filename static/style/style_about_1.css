@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+main section {
+    display: flex;
+    height: auto;
+}
+main section #container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    padding-top: 30px;
+}
+main section #container #about {
+    display: flex;
+    word-break: keep-all;
+    width: 100%;
+    flex-wrap: wrap;
+} 
+aside #container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    border: 0px solid brown;
+}
+aside #container div {
+    width: 100%;border: 0px solid brown;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+main section p {
+    font-size: 14pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+aside #container #bo {
+    margin-bottom: auto;
+}
+aside #container div button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 35px;
+    border: 0;
+    outline: 0;
+    color: rgb(17, 0, 255); 
+    font-size: 15pt;
+    margin-top: 30px;
+    border-radius: 20px;
+    background-color: rgb(240, 195, 49);
+    box-shadow: 5px 5px 7px rgb(58, 57, 57);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: 0.5s;
+}
+aside #container div button:hover {
+    background-color: aliceblue;
+    box-shadow: .0px .0px 15px 1px rgb(58, 57, 57);
+    cursor: pointer;
+}
+aside {
+    border-right: 0px solid rgb(240, 195, 49);
+    box-shadow: 10px 5px 10px rgb(240, 195, 49);
+    overflow: auto;
+}
+footer a img {
+    width: 50px;
+    height: 50px;
+}
+footer #div {
+    margin-right: 30px;
+}
+footer a {
+    margin: 10px;
+}
+@media only screen and (max-width: 857px){
+    header {
+        order: 0;
+    }
+    main {
+        order: 1;
+    }
+    aside {
+        flex: 1 1 300px;
+        order: 2;
+    }
+    footer {
+        order: 3;
+    }
+}
+@media only screen and (max-width: 595px){
+    main section #container {
+        padding: 30px;
+    }
+    main {
+        height: auto;
+    }
+    aside #container {
+        align-items: center;
+        justify-content: center;
+    }
+    aside #container #div_b {
+        width: 100%;
+        text-align: center;
+    }
+    main section p {
+        text-align: justify;
+    }
+    main section div div #upgrade {
+        text-align: center;
+    }
+}
+main section p {
+    margin-bottom: 15px;
+}
+main section div div #upgrade {
+    margin-top: 15px;
+    margin-left: auto;
+}
+main section div div #bottom {
+    margin-left: -20px;
+}
+main section div div ul {
+    list-style-type: none;
+}

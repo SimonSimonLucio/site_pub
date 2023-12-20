@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main {
+    height: calc(100vh - 224);
+}
+@media only screen and (max-width: 817px) {
+    main {
+        height: calc(100vh - 224px);
+    }
+}
+main section {
+    display: flex;
+    height: 100%;
+    font-size: 14pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    align-items: center;
+    justify-content: center;
+    border: 0px solid brown;
+}
+main section form {
+    flex-direction: column;
+}
+main section #div1, #div2{
+    display: flex;
+    width: 410px;
+    height: 260px;
+    margin: 20px;
+    border: 0px solid brown;
+    align-items: center;
+    justify-content: center;
+    float: left;
+}
+main section div input, textarea{
+    font-size: 13pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 1.5px solid rgb(7, 40, 187);
+    padding: 10px;
+	background-color: rgb(236, 240, 255);
+    border-radius: 10px;
+    transition: 0.5s;
+    outline: 0;
+}
+main section div input:hover, textarea:hover{
+    border: 3px solid lightslategray;
+    background-color: floralwhite;
+}
+main section div input{
+    width: 350px;
+    height: 40px;
+    padding: 10px;
+}
+main section div #message{
+    width: 400px;
+    height: 250px;
+    padding: 5px;
+}
+main #send_message {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-left: 10px;
+}
+@media only screen and (max-width: 911px) {
+    main section {
+        height: auto;
+    }
+    main section #div1, main section #div2, #first_div{
+        width: 100%;
+        display: flex;
+        margin-bottom: 15px;
+        align-items: center;
+        justify-content: center;
+        border: 0px solid brown;
+    }
+    main section #div1, main section #div2 {
+        margin: 5px;
+    }
+    main section form {
+        width: 85%;
+        flex-direction: column;
+    }
+    main section #div1 div {
+        width: 100%;
+    }
+    main section #div1 div input, main section #div2 textarea {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 595px) {
+    main section form #div1, main section form #div2 {
+        clear: both;
+    }
+    main section form{
+        width: 85%;
+        flex-direction: column;
+    }
+    main section #first_div {
+        display: flex;
+        flex-direction: column;
+    }
+}
+main section #div3 #sender_btn {
+    background-color: rgb(67, 80, 255);
+    border-radius: 17px;
+    width: 220px;
+    height: 50px;
+    font-size: 14pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 2px solid rgb(77, 57, 252);
+    transition: 0.5s;
+    outline: 0;
+}
+main section #div3 #sender_btn:hover {
+    border-radius: 20px;
+    border: 3px solid lightslategray;
+	background-color: rgba(253, 187, 6, 0.336);
+    font-size: 15pt;
+    cursor: pointer;
+}
+
+main section #div3 {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media only screen and (max-width: 817px) {
+    header {
+        order: 0;
+    }
+
+    main {
+        height: calc(100vh - 212px);
+        order: 1;
+    }
+    aside {
+        height: 100px;
+        order: 2;
+    }
+    footer {
+        order: 3;
+    }
+}
+@media only screen and (max-width: 595px) {
+    main {
+        height: auto;
+    }
+}

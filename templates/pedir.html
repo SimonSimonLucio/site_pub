@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Serviços</title>
+        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='icons/icon.png')}}" />
+        <link rel="stylesheet" href="{{url_for('static', filename='style/style.css')}}" />
+        <link rel="stylesheet" href="{{url_for('static', filename='style/style_for_request.css')}}" />
+    </head>
+
+    <body>
+        <header>
+            <a href="{{url_for('index')}}" id="logo">
+                <img src="{{url_for('static', filename='icons/icon.png')}}" class="logo" />
+            </a>
+            <button id="openMenu">&#9776</button>
+            <nav id="menu">
+                <button id="closeMenu">X</button>
+                <a href="{{url_for('index')}}">Início</a>
+                <a href="{{url_for('download')}}">Produtos</a>
+                <a href="{{url_for('about_fracigma')}}">Sobre</a>
+                <a href="{{url_for('contact')}}">Contato</a>
+            </nav>
+        </header>
+        <main>
+            <h1 id="send_message">{{ pedido }}</h1>
+            <section>
+                <form action="/request_service" method="post">
+                        <div id="buttons">
+                            <label for="data_de_entrega">Desejo receber em:</label>
+                            <input type="date" name="data_de_entrega" id="data_de_entrega" class="data_de_entrega" required />
+                            <button type="button" id="limpar_" class="limpar_">Limpar</button>
+                            <button type="submit">Pedir</button>
+                        </div>
+                        <div id="container">
+                            <div> 
+                                <label for="title1">Pedido:</label><br />
+                                <input type="text" name="pedido" id="title1" class="title1" placeholder="Ex: Site comercial, Bot para meu negócio..." required /><br />
+                                <label for="conteudo1">Descrição:</label><br />
+                                <textarea name="descricao" id="conteudo1" class="conteudo1" required></textarea>
+                            </div>
+                            <div>
+                                <label for="title1">Nome:</label><br />
+                                <input type="text" name="nome" id="name" class="name" required /><br />
+                                <label for="genero">Homem:</label><input type="radio" name="genero" id="genero" value="Homen" required/>
+                                <label for="genero">Mulher:</label><input type="radio" name="genero" id="genero" value="Mulher" required/>
+                                <input type="number" name="idade" id="idade" class="idade" placeholder="Idade" required /><br />
+                                <label for="email">Email:</label><br />
+                                <input type="email" name="email" id="email" class="email" required /><br />
+                                <label for="telefone">Telefone:</label><br />
+                                <input type="tel" name="telefone" id="telefone" placeholder="Por favor inclua o indicativo Ex: +1" required /><br />
+                                <select name="contry" id="contry" required>
+                                    <option value="">Selecione sua nacionalidade</option>
+                                    <option value="Portugal">Portugal</option>
+                                    <option value="Brazil">Brazil</option>
+                                    <option value="Angola">Angola</option>
+                                    <option value="Moçambique">Moçambique</option>
+                                    <option value="Cabo Verde">Cabo Verde</option>
+                                    <option value="Guiné-Bissau">Guiné-Bissau</option>
+                                    <option value="Timor-Leste">Timor-Leste</option>
+                                    <option value="São Tomé e Príncipe">São Tomé e Príncipe</option>
+                                </select>
+                            </div>
+                        </div>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <div id="div">©2023 FraCIGMA</div>
+            <div>
+                <a href="#"><img src="../static/icons/icon1.png" /></a>
+                <a href="#"><img src="../static/icons/icon4.png" /></a>
+            </div>
+            <div>
+                <a href="#"><img src="../static/icons/icon8.png" /></a>
+                <a href="#"><img src="../static/icons/icon5.png" /></a>
+            </div>
+        </footer>
+        <script type="text/javascript" src="{{url_for('static', filename='script/script.js')}}"></script>
+        <script type="text/javascript" src="{{url_for('static', filename='script/script_publications.js')}}"></script>
+    </body>
+</html>

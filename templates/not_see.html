@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Private-IO</title>
+        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='icons/icon.png')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='/style/style.css')}}" />
+        <link rel="stylesheet" href="{{url_for('static', filename='style/style_not_seen_for.css')}}" />
+    </head>
+
+    <body>
+        <header>
+            <a href="{{url_for('index')}}" id="logo">
+                <img src="{{url_for('static', filename='icons/icon.png')}}" class="logo" />
+            </a>
+            <button id="openMenu">&#9776</button>
+            <nav id="menu">
+                <button id="closeMenu">X</button>
+                <a href="{{url_for('not_know')}}">Mensagens</a>
+                <a href="{{url_for('publications')}}">Publicar</a>
+                <a href="{{url_for('solicitacoes')}}">Solicitações</a>
+                <a href="{{url_for('logoout')}}">Log Out</a>
+            </nav>
+        </header>
+        <main><br /><br /><br />
+            <h1>Mensagens</h1>
+            <section>
+                {%for message in messages%}
+                <form action="/privado/deletar_sms/{{ message.id }}" method="post">
+                <div id="container">
+                    <div id="div_id">
+                        <div>
+                            <p>{{message.id}}</p>
+                        </div>
+                    </div>
+                    <div id="sub_container_2">
+                        <div id="remet" class="remet">
+                            <label for="name_sender">Nome:</label>
+                            <span id="name_sender" class="name_sender">{{message.name}}</span><br />
+                            <label for="email_sender">E-mail:</label>
+                            <span id="email_sender" class="email_sender">{{message.email}}</span><br />
+                            <label for="phone_sender">Telefone:</label>
+                            <span id="phone_sender" class="phone_sender">{{message.phonenumber}}</span><br />
+                        </div>
+                        <div id="messager" class="messager">
+                            <label for="message">Mensagem:</label>
+                            <p id="message" class="message">
+                                {{message.message}}
+                            </p>
+                            <p>Data recebido: {{message._date_time_}}</p>
+                        </div>
+                    </div>
+                    <div id="div_btn">
+                        <div>
+                            <button type="submit" id="exclude" class="exclude">Excluir</button>
+                        </div>
+                    </div>
+                </div>
+                </form>
+                {% endfor %}
+            </section>
+        </main>
+        <footer>
+            <div id="div">©2023 FraCIGMA</div>
+            <div>
+                <a href="#"><img src="../static/icons/icon1.png" /></a>
+                <a href="#"><img src="../static/icons/icon4.png" /></a>
+            </div>
+            <div>
+                <a href="#"><img src="../static/icons/icon8.png" /></a>
+                <a href="#"><img src="../static/icons/icon5.png" /></a>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="{{url_for('static', filename='/script/script.js')}}">
+        </script>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Solicitações</title>
+        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='icons/icon.png')}}" />
+        <link rel="stylesheet" href="{{url_for('static', filename='/style/style.css')}}" />
+        <link rel="stylesheet" href="../static/style/style_requests.css" />
+    </head>
+
+    <body>
+        <header>
+            <a href="{{url_for('index')}}" id="logo">
+                <img src="{{url_for('static', filename='icons/icon.png')}}" class="logo" />
+            </a>
+            <button id="openMenu">&#9776</button>
+            <nav id="menu">
+                <button id="closeMenu">X</button>
+                <a href="{{url_for('not_know')}}">Mensagens</a>
+                <a href="{{url_for('publications')}}">Publicar</a>
+                <a href="{{url_for('solicitacoes')}}">Solicitações</a>
+                <a href="{{url_for('logoout')}}">Log Out</a>
+            </nav>
+        </header>
+        <aside>
+            <div id="container">
+                <div id="subcontainer">
+                    <div id="div_t">
+                        <h1>Mais assuntos</h1>
+                    </div>
+                    {% for pedido in pedidos %}
+                    <div>
+                        <a href="/solic/{{ pedido.id }}"><button type="button" >Pedido {{pedido.id}}: rbcmt{{pedido.data_recebimento}}</button></a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </aside>
+        <main>
+            <h1>Pedidos</h1>
+            <section>
+                <div id="container">
+                    <form action="">
+                        <div id="pedido_info">
+                            <span><strong>Pedido:</strong> {{ pedido.pedido }}</span><br />
+                            <span><strong>Demanda:</strong><br /> <p>{{ pedido.descricao }}</p></span>
+                        </div>
+                        <div id="client_info">
+                            <span><strong>Nome:</strong> {{ pedido.nome }}, </span>
+                            <span> <strong>{{ pedido.idade }} anos de idade</strong> </span><br />
+                            <span>{{ pedido.sexo }}</span><br />
+                            <span><strong>E-mail: </strong>{{ pedido.email }}</span><br />
+                            <span><strong>Telefone: </strong> {{ pedido.telefone }}</span><br />
+                            <span><strong>Nacionalidade: </strong>{{ pedido.nacionalidade }}</span>
+                        </div><span>Desejado para: {{ pedido.data_recebimento }}</span>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div id="div">©2023 FraCIGMA</div>
+            <div>
+                <a href="#"><img src="../static/icons/icon1.png" /></a>
+                <a href="#"><img src="../static/icons/icon4.png" /></a>
+            </div>
+            <div>
+                <a href="#"><img src="../static/icons/icon8.png" /></a>
+                <a href="#"><img src="../static/icons/icon5.png" /></a>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="{{url_for('static', filename='/script/script.js')}}">
+        </script>
+    </body>
+</html>

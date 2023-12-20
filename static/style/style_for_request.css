@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main section {
+    height: 100%;
+}
+main section form #buttons {
+    display: flex;
+    padding-right: 30px;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 15pt;
+}
+main section form #buttons button {
+    width: 150px;
+    height: 35px;
+    font-size: 13.5pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 10px;
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+    color: aliceblue;
+    transition: 0.5s;
+}
+main section form #buttons button:hover {
+    background-color: rgb(127, 127, 253);
+    color: rgb(255, 187, 0);
+    font-size: 20px;
+    cursor: pointer;
+}
+main section form #buttons input {
+    width: 180px;
+    height: 35px;
+    font-size: 14pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: 0;
+}  
+main section form #buttons input:hover {
+    cursor: pointer;
+}
+main section form #container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    font-size: x-large;
+    align-items: baseline;
+    justify-content: center;
+    border: 0px solid brown;
+}
+main section form #container div {
+    margin: 40px;
+}
+main section form #container div input, select {
+    height: 40px;
+    width: 350px;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    border: 0;
+    outline: 0;
+    box-shadow: 5px 5px 8px rgb(255, 174, 0);
+    transition: 0.8s;
+    font-size: 12pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+main section #container div .idade {
+    width:90px;
+}
+main section #container div .idade:hover {
+    width:90px;
+}
+main section form #container div select {
+    margin-top: 15px;
+    font-size: 21px;
+    transition: 1s;
+}
+main section form #container div select:hover {
+    user-select: contain;
+    cursor: pointer;
+}
+main section form #container div textarea {
+    height: 300px;
+    width: 350px;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    box-shadow: 5px 5px 8px rgb(255, 174, 0);
+    transition: 0.8s;
+    resize: none;
+}
+main section form #container div textarea:hover {
+    height: 303px;
+    width: 353px;
+    cursor: pointer;
+}
+main section form #container div input:hover {
+    height: 43px;
+    width: 353px;
+}
+main section form #container div #genero  {
+    height: 15px;
+    width: 15px;
+    box-shadow: none;
+    margin-left: 10px;
+    margin-right: 15px;
+}
+main section form #container div select option {
+    background-color: rgba(255, 210, 8, 0.178);
+}
+@media only screen and (max-width: 770px) {
+    main section form #buttons {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    main #send_message {
+        margin: 20px auto;
+        text-align: center;
+    }
+    main section form #buttons {
+        order: 0;
+    }
+    main section form #container {
+        order: 1;
+    }
+}
+@media only screen and (max-width: 390px) {
+    main section form {
+        padding: 0;
+        width: 100%;
+        border: 0px solid brown;
+    }
+    main section form #container div {
+        padding: 0;
+        margin: 0;
+        width: 95%;
+        border: 0px solid brown
+    }
+    main section form #container{
+        padding: 0;
+        width: 100%;
+        border: 0px solid brown;
+    }
+    main section form #container div input, .email {
+        width: 100%;
+    }
+    main section form #container div textarea {
+        width: 100%;
+    }
+    main section form #container div select {
+        width: 100%;
+    }
+    main section form #container div input:hover, .email:hover {
+        width: 100%;
+    }
+    main section form #container div textarea:hover {
+        width: 100%;
+    }
+    main section form #container div select:hover {
+        width: 100%;
+    }
+}

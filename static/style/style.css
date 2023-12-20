@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header, nav, main, aside, footer {
+    display: flex;
+}
+body {
+    flex-wrap: wrap;
+    display: flex;
+    flex: 1 1 100vw;
+    background-color: rgba(253, 187, 6, 0.336);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+header {
+    flex: 1 1 100vw;
+    height: 100px;
+    margin: 0px 0px 3px 0px;
+    background-color: rgba(248, 190, 0);
+}
+header #logo {
+    flex: 0 1 150px;
+    background: none;
+}
+header #logo .logo {
+    width: 100px;
+    height: 100px;
+}
+nav {
+    flex: 1 1 100vw;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: none;
+}
+nav a {
+    font-size: 20pt;
+    font-weight: bold;
+    margin: 3%;
+    text-decoration: none;
+    color: rgb(111, 0, 255);
+    transition: 0.8s;
+    text-transform: uppercase;
+}
+nav a:hover {
+    font-size: 24pt;
+    color: rgb(91, 0, 236);
+    text-shadow: 4px 4px 5px rgb(78, 64, 37);
+}
+main {
+    flex-wrap: wrap;
+    flex: 20 1 600px;
+    height: calc(100vh - 212px);
+    overflow: auto;
+    margin: /*top*/3px /*right*/3px /*bottom*/3px /*left*/3px;
+}
+main section {
+    width: 100%;
+    height: 2000px;
+    /*background: linear-gradient(gray, rgb(43, 43, 43), rgb(14, 13, 13));*/
+    background-color: none;
+}
+aside {
+    flex: 1 1 250px;
+}  
+footer {
+    height: 100px;
+    flex: 1 1 100vw;
+    margin: 3px 0px 0px 0px;
+    background: rgb(46, 45, 42);
+    align-items: center;
+    justify-content: center;
+    font-size: 21pt;
+    flex-wrap: wrap;
+}
+footer a img {
+    width: 50px;
+    height: 50px;
+}
+footer #div {
+    margin-right: 30px;
+}
+footer a {
+    margin: 10px;
+}
+@media only screen and (max-width: 857px) {
+    header {
+        order: 0;
+    }
+
+    main {
+        height: calc(100vh - 212px);
+        order: 1;
+    }
+    aside {
+        height: 300px;
+        order: 2;
+    }
+    footer {
+        order: 3;
+        height: 150px;
+    }
+}
+#openMenu, #closeMenu {
+    font-size: 23pt;
+    background: none;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    display: none;
+}
+@media only screen and (max-width: 595px) {
+    main {
+        height: auto;
+    }
+    #openMenu, #closeMenu {
+        display: block;
+    }
+    #openMenu {
+        margin-left: auto;
+    }
+    #closeMenu {
+        position: fixed;
+        top: 5px;
+        right: 3px;
+    }
+    nav {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 212, 84, 0.623);
+        display: none;
+        opacity: 0;
+        transition: 0.5s;
+    }
+    header {
+        height: 50px;
+    }
+    header #logo .logo {
+        width: 50px;
+        height: 50px;
+    }
+    aside #container {
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+}

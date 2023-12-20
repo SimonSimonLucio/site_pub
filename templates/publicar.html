@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Publicar</title>
+        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='icons/icon.png')}}" />
+        <link rel="stylesheet" href="{{url_for('static', filename='style/style.css')}}" />
+        <link rel="stylesheet" href="{{url_for('static', filename='style/style_publications.css')}}" />
+        
+
+    </head>
+
+    <body>
+        <header>
+            <a href="{{url_for('index')}}" id="logo">
+                <img src="{{url_for('static', filename='icons/icon.png')}}" class="logo" />
+            </a>
+            <button id="openMenu">&#9776</button>
+            <nav id="menu">
+                <button id="closeMenu">X</button>
+                <a href="{{url_for('not_know')}}">Mensagens</a>
+                <a href="{{url_for('publications')}}">Publicar</a>
+                <a href="{{url_for('solicitacoes')}}">Solicitações</a>
+                <a href="{{url_for('logoout')}}">Log Out</a>
+            </nav>
+        </header>
+        <main>
+            
+            <h1 id="title">Publicar</h1>
+            <section>
+                <form enctype="multipart/form-data" action="/publicate" method="post">
+                    <div id="buttons">
+                        <input type="text" name="topico" id="topico" class="topico" placeholder="Adicionar tópico" required>
+                        <input type="datetime-local" name="date_and_time" id="date_and_time" class="date_and_time" required />
+                        <button type="button" id="limpar" class="limpar">Limpar</button>
+                        <button type="submit" id="publicate" class="publicate">Publicar</button>
+                    </div> 
+                    <div id="container" class="container">
+                        <div>
+                            <label for="title1">1º Título</label><br />
+                            <input type="text" name="title1" id="title1" class="title1" required /><br />
+                            <label for="conteudo1">Conteúdo:</label><br />
+                            <textarea name="conteudo1" id="conteudo1" class="conteudo1" required></textarea><br />
+                            <input type="file" name="primeira_imagem" id="primeira_imagem" class="primeira_imagem" required />
+                        </div>
+                        <div>
+                            <label for="title2">2º Título</label><br />
+                            <input type="text" name="title2" id="title2" class="title2" required /><br />
+                            <label for="conteudo2">Conteúdo:</label><br />
+                            <textarea name="conteudo2" id="conteudo2" class="conteudo2" required></textarea><br />
+                            <input type="file" name="segunda_imagem" id="segunda_imagem" class="segunda_imagem" required />
+                        </div>
+                        <div>
+                            <label for="title3">3º Título</label><br />
+                            <input type="text" name="title3" id="title3" class="title3" required /><br />
+                            <label for="conteudo3">Conteúdo:</label><br />
+                            <textarea name="conteudo3" id="conteudo3" class="conteudo3" required></textarea><br />
+                            <input type="file" name="terceira_imagem" id="terceira_imagem" class="terceira_imagem" required />
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <div id="div">©2023 FraCIGMA</div>
+            <div>
+                <a href="#"><img src="../static/icons/icon1.png" /></a>
+                <a href="#"><img src="../static/icons/icon4.png" /></a>
+            </div>
+            <div>
+                <a href="#"><img src="../static/icons/icon8.png" /></a>
+                <a href="#"><img src="../static/icons/icon5.png" /></a>
+            </div>
+        </footer>
+        <script type="text/javascript" src="{{url_for('static', filename='script/script.js')}}"></script>
+        <script type="text/javascript" src="{{url_for('static', filename='script/script_publications.js')}}"></script>
+    </body>
+</html>

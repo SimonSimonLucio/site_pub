@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sobre</title>
+        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='icons/icon.png')}}" />
+        <link rel="stylesheet" href="{{url_for('static', filename='style/style.css')}}" />
+        <link rel="stylesheet" href="{{url_for('static', filename='style/style_about_1.css')}}" />
+        <link rel="stylesheet" href="../static/style/style_about_1.css" />
+        <script type="text/javascript" src="../static/script/script_about.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <a href="{{url_for('index')}}" id="logo">
+                <img src="{{url_for('static', filename='icons/icon.png')}}" class="logo" />
+            </a>
+            <button id="openMenu">&#9776</button>
+            <nav id="menu">
+                <button id="closeMenu">X</button>
+                <a href="{{url_for('index')}}">Início</a>
+                <a href="{{url_for('download')}}">Produtos</a>
+                <a href="{{url_for('about_fracigma')}}">Sobre</a>
+                <a href="{{url_for('contact')}}">Contato</a>
+            </nav>
+        </header> 
+        <aside>
+            <div id="container">
+                <div id="div_b">
+                    <h1>Mais sobre nós</h1>
+                </div>
+                <div>
+                    <a href="{{url_for('politicas_privacidae')}}"><button type="button" >Políticas e privacidade</button></a>
+                </div>
+                <div id="bo">
+                    <a href="{{url_for('nossos_interesses')}}"><button type="button" >Nossos interesses</button></a>
+                </div>
+            </div>
+        </aside>
+        <main>
+            <h1>Nossos interesses</h1>
+            <section>
+                <div id="container">
+                    <div id="about" >
+                        <p id="info" class="info">
+                            <ol>
+                                <li><h2>Um Universo de Conhecimento em um Único Espaço:</h2>
+                                    <ul>
+                                        <li><p>No nosso site, não existem limites para os temas que exploramos e compartilhamos. Somos um ecossistema versátil, unindo uma variedade de assuntos para criar uma experiência imersiva. De assuntos tecnológicos a nuances da vida cotidiana, passando por cultura, sociedade, e além, oferecemos um ambiente acolhedor onde a diversidade de interesses é celebrada. Estamos em constante evolução para garantir que todos os que nos visitam encontrem uma fonte confiável e inspiradora para expandir seus horizontes intelectuais e explorar sua curiosidade.</p></li>
+                                    </ul>
+                                </li>
+                                <li><h2>Abordamos Todos os Assuntos Imagináveis:</h2>
+                                    <ul>
+                                        <li><p>Em nosso espaço online, abraçamos a vastidão do conhecimento, oferecendo uma plataforma dinâmica que cobre uma gama incrivelmente ampla de assuntos. Desde tecnologia de ponta até artes, ciência, cultura, saúde e muito mais, mergulhamos de cabeça em cada tópico, trazendo discussões relevantes, insights interessantes e informações úteis. Nosso compromisso é proporcionar uma jornada de descoberta e aprendizado, onde qualquer que seja o interesse ou curiosidade, há sempre algo intrigante e enriquecedor para todos os visitantes.</p></li>
+                                    </ul>
+                                </li>
+                            </ol>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <div id="div">©2023 FraCIGMA</div>
+            <div>
+                <a href="#"><img src="../static/icons/icon1.png" /></a>
+                <a href="#"><img src="../static/icons/icon4.png" /></a>
+            </div>
+            <div>
+                <a href="#"><img src="../static/icons/icon8.png" /></a>
+                <a href="#"><img src="../static/icons/icon5.png" /></a>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="{{url_for('static', filename='/script/script.js')}}">
+        </script>
+        <script type="text/javascript" src="../static/script/script_about.js"></script>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Franklin_Gothic_Medium_Arial_Narrow_Arial_sans-serif</title>
+        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='icons/icon.png')}}" />
+        <link rel="stylesheet" href="{{url_for('static', filename='/style/style.css')}}" />
+        <link rel="stylesheet" href="{{url_for('static', filename='style/style_in.css')}}" />
+    </head>
+
+    <body>
+        <header>
+            <a href="{{url_for('index')}}" id="logo">
+                <img src="{{url_for('static', filename='icons/icon.png')}}" class="logo" />
+            </a>
+            <button id="openMenu">&#9776</button>
+            <nav id="menu">
+                <button id="closeMenu">X</button>
+                <a href="{{url_for('index')}}">Início</a>
+                <a href="{{url_for('download')}}">Produtos</a>
+                <a href="{{url_for('about_fracigma')}}">Sobre</a>
+                <a href="{{url_for('contact')}}">Contato</a>
+            </nav>
+        </header>
+        <main><br /><br /><br />
+            <section>
+                <form action="auth" method="post">
+                    <div id="first" class="first">
+                        <div id="div_span"><span>{{error}}</span></div>
+                        <label for="username">User:</label><br />
+                        <input type="email" name="username" id="username" class="username" placeholder="E-mail or phnenumber" required/><br />
+                        <label for="password">Password:</label><br />
+                        <input type="password" name="password" id="password" class="password" placeholder="Password" required /><br />
+                    </div>
+                    <div id="after_2" class="after_2">
+                        <button type="submit" id="log_in" class="log_in">Log In</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+        
+        <footer>
+            <div id="div">©2023 FraCIGMA</div>
+            <div>
+                <a href="#"><img src="../static/icons/icon1.png" /></a>
+                <a href="#"><img src="../static/icons/icon4.png" /></a>
+            </div>
+            <div>
+                <a href="#"><img src="../static/icons/icon8.png" /></a>
+                <a href="#"><img src="../static/icons/icon5.png" /></a>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="{{url_for('static', filename='/script/script.js')}}">
+        </script>
+    </body>
+</html>

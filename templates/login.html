@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo de Deleção com Flask</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <button onclick="deletarUsuario(1)">Deletar Usuário com ID 1</button>
+    <ol>
+        <li><strong></strong></li>
+        <li><p><strong>Divisão de Números Inteiros:</strong>No Python 2, a divisão de dois números inteiros resulta em um número inteiro. Já no Python 3, a divisão de dois números inteiros resulta em um número de ponto flutuante.</p></li>
+        <img src="d" width="85%" height="auto">
+    </ol>
+    <script>
+        function deletarUsuario(userId) {
+            $.ajax({
+                url: '/deletar_usuario/' + userId,
+                type: 'DELETE',
+                success: function(result) {
+                    alert(result); // Mostra o resultado da deleção
+                }
+            });
+        }
+    </script>
+</body>
+</html>
