@@ -3,3 +3,4 @@ pytest-cov
 Flask   
 Flask-SQLAlchemy   
 gunicorn
+flask_login
